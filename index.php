@@ -91,9 +91,8 @@
 
     // display the product
     echo $numbers;
-    }
 ?>
-      </iframe>
+    </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
       <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
     </center>
