@@ -46,15 +46,15 @@
       <!--Display Statement for Museum Admission-->
       <iframe id="result" name="result">
  <?php
-   // Created by: Julien Lamoureux
-   // Created on: May 2023
-   // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
+        // Created by: Julien Lamoureux
+        // Created on: May 2023
+  // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
 
-   // intialize product to 0
-   $product = 0;
+    // intialize product to 0
+    $product = 0;
 
-   // initialize numbers to an empty string
-   $numbers = "";
+    // initialize numbers to an empty string
+    $numbers = "";
 
     // get first integer
     $firstInt = $_POST["first-int"];
@@ -83,8 +83,7 @@
      }
 
     // otherwise, if the first integer is greater than 0 and the second int is less than 0, then make the product negative
-    else if (($secondInt < 0) && ($firstInt > 0)) {
-      $product = $product * -1;
+    else if (($secondInt < 0) && ($firstInt > 0)) $product = $product * -1;
     }
 
     // redefine calculation statement
