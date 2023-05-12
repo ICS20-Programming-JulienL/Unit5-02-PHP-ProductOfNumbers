@@ -46,9 +46,9 @@
       <!--Display Statement for Museum Admission-->
       <iframe id="result" name="result">
  <?php
-        // Created by: Julien Lamoureux
-        // Created on: May 2023
-  // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
+    // Created by: Julien Lamoureux
+    // Created on: May 2023
+    // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
 
     // intialize product to 0
     $product = 0;
@@ -68,23 +68,24 @@
 
     // if the user enters nothing, tell them to enter two integers
     if (($firstInt == "") || ($secondInt == "")) {
-      echo "Please enter two integers.";
+        echo "Please enter two integers.";
     }
     
-    // use a for loop to calculate the product from the two integers
+     // use a for loop to calculate the product from the two integers
     else {
-      for ($counter = 0; $counter < $absSecondInt; $counter++) {
-        $product += $absFirstInt;
-      }
+        for ($counter = 0; $counter < $absSecondInt; $counter++) {
+            $product += $absFirstInt;
+        }
 
     // if the first integer is less than 0 and the second int is greater than 0, then make the product negative
-    if (($firstInt < 0) && ($secondInt > 0)) {
-       $product = $product * -1;
-     }
+        if (($firstInt < 0) && ($secondInt > 0)) {
+            $product = $product * -1;
+        }
 
     // otherwise, if the first integer is greater than 0 and the second int is less than 0, then make the product negative
-    else if (($secondInt < 0) && ($firstInt > 0)) $product = $product * -1;
-    }
+        ELSEIF (($secondInt < 0) && ($firstInt > 0)) {
+            $product = $product * -1;
+         }
 
     // redefine calculation statement
     $numbers = $firstInt . "*" . $secondInt . "=" . $product;
