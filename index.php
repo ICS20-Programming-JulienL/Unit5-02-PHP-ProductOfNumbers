@@ -67,27 +67,32 @@
         $absSecondInt = abs($int2);
 
          // if the user enters nothing, tell them to enter two integers
-         if (($firstInt=="") || ($secondInt=="")) {
+        if (($firstInt == "") || ($secondInt == "")) {
            echo "Please enter two integers.";
-         }
+        }
 
-         // use a for loop to calculate the product from the two integers 
-         else {
-           for ($counter = 0; $counter< $absSecondInt; $counter++) {
+        // use a for loop to calculate the product from the two integers
+        else {
+           for ($counter = 0; $counter < $absSecondInt; $counter++) {
              $product += $absFirstInt;
            }
 
-           if (($firstInt < 0)&&($secondInt>0)) {
+           // if the first integer is less than 0 and the second int is greater than 0, then make the product negative
+           if (($firstInt < 0) && ($secondInt > 0)) {
              $product = $product * -1;
            }
 
-           else if (($secondInt < 0)&&($firstInt>0)) {
+           // otherwise, if the first integer is greater than 0 and the second int is less than 0, then make the product negative
+           else if (($secondInt < 0) && ($firstInt > 0)) {
              $product = $product * -1;
            }
-           
+
+           // redefine calculation statement
            $numbers = $firstInt . "*" . $secondInt . "=" . $product;
+
+           // display the product
            echo $numbers;
-         }
+      }
 ?>
       </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
