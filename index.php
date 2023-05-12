@@ -55,12 +55,12 @@
 
         // initialize numbers to an empty string
         $numbers = "";
-  
+
         // get first integer
         $firstInt = $_POST["first-int"];
         $int1 = intval($firstInt);
         $absFirstInt = abs($int1);
-  
+
         // get second integer
         $secondInt = $_POST["second-int"];
         $int2 = intval($secondInt);
@@ -76,18 +76,18 @@
            for ($counter = 0; $counter< $absSecondInt; $counter++) {
              $product += $absFirstInt;
            }
-           
-  
+
            if (($firstInt < 0)&&($secondInt>0)) {
-             $product = "-".$product;
+             $product = $product * -1;
            }
-  
+
            else if (($secondInt < 0)&&($firstInt>0)) {
-    $product = "-".$product;
-  }
-  $numbers = $firstInt."*".$secondInt."=".$product;
-  echo $numbers;
-}
+             $product = $product * -1;
+           }
+           
+           $numbers = $firstInt . "*" . $secondInt . "=" . $product;
+           echo $numbers;
+         }
 ?>
       </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
