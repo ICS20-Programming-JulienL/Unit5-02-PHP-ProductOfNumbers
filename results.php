@@ -20,15 +20,15 @@
     $absSecondInt = abs($int2);
 
     // if the user enters nothing, tell them to enter two integers
-    if (($firstInt == "") || ($secondInt == "")) {
+if (($firstInt == "") || ($secondInt == "")) {
         echo "Please enter two integers.";
-    }
+} 
 
     // use a for loop to calculate the product from the two integers
-    else {
-    for ($counter = 0; $counter < $absSecondInt; $counter++) {
+else {
+for ($counter = 0; $counter < $absSecondInt; $counter++) {
             $product += $absFirstInt;
-    }
+} 
 
     // if the firstInt is less than 0 and the secondInt is greater than 0, then make the product negative
     if (($firstInt < 0) && ($secondInt > 0)) {
@@ -45,4 +45,3 @@
 
     // display the product
     echo $numbers;
-    ?>
