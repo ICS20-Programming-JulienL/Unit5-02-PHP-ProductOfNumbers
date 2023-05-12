@@ -33,10 +33,10 @@
     }
   
       if (($firstInt < 0)&&($secondInt>0)) {
-        $product = "-".$product;
+        $product = $product*-1;
       }
       else if (($secondInt < 0)&&($firstInt>0)) {
-        $product = "-".$product;
+        $product = $product*-1;
         
       }
     

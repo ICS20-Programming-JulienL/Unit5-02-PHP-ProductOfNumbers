@@ -41,7 +41,7 @@
            <br><br>
         <label for="second-int">Enter your second integer</label>
         <input type="number" id="second-int" placeholder="Eg. 5" name="second-int"><br><br>
-         <input type="submit" value="Calculate Product"><br><br>	
+        <input type="submit" value="Calculate Product"><br><br>	
       </form>
       <!--Display Statement for Museum Admission-->
       <iframe id="result" name="result">
@@ -50,46 +50,41 @@
 // Created on: May 2023
 // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
 
-  // intialize product to 0
-  $product = 0;
+// intialize product to 0
+$product = 0;
 
-  // initialize numbers to an empty string
-  $numbers = "";
+// initialize numbers to an empty string
+$numbers = "";
   
-  // get first integer
-  $firstInt = $_POST["first-int"];
-  $int1 = intval($firstInt);
-  $absFirstInt = abs($int1);
+// get first integer
+$firstInt = $_POST["first-int"];
+$int1 = intval($firstInt);
+$absFirstInt = abs($int1);
   
-  // get second integer
-   $secondInt = $_POST["second-int"];
-   $int2 = intval($secondInt);
-   $absSecondInt = abs($int2);
+// get second integer
+$secondInt = $_POST["second-int"];
+$int2 = intval($secondInt);
+$absSecondInt = abs($int2);
 
-  $variable = 0;
+// if the user enters nothing, tell them to enter two integers
+if (($firstInt=="") || ($secondInt=="")) {
+  echo "Please enter two integers.";
+}
 
-  // if the user enters nothing, tell them to enter two integers
-  if (($firstInt=="") || ($secondInt=="")) {
-    echo "Please enter two integers.";
+// use a for loop to calculate the product from the two integers 
+else {
+  for ($counter = 0; $counter< $absSecondInt; $counter++) {
+    $product += $absFirstInt;
   }
-
-  // use a for loop to calculate the product from the two integers 
-  else {
-    for ($counter = 0; $counter< $absSecondInt; $counter++) {
-      $product += $absFirstInt;
-    }
-  
-      if (($firstInt < 0)&&($secondInt>0)) {
-        $product = "-".$product;
-      }
-      else if (($secondInt < 0)&&($firstInt>0)) {
-        $product = "-".$product;
-        
-      }
-    
-      $numbers = $firstInt."*".$secondInt."=".$product;
-      echo $numbers;
+  if (($firstInt < 0)&&($secondInt>0)) {
+    $product = "-".$product;
   }
+  else if (($secondInt < 0)&&($firstInt>0)) {
+    $product = "-".$product;
+  }
+  $numbers = $firstInt."*".$secondInt."=".$product;
+  echo $numbers;
+}
 ?>
       </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
