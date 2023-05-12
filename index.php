@@ -70,29 +70,29 @@
     if (($firstInt == "") || ($secondInt == "")) {
         echo "Please enter two integers.";
     }
-    
-     // use a for loop to calculate the product from the two integers
+
+    // use a for loop to calculate the product from the two integers
     else {
-        for ($counter = 0; $counter < $absSecondInt; $counter++) {
+    for ($counter = 0; $counter < $absSecondInt; $counter++) {
             $product += $absFirstInt;
-        }
+    }
 
-    // if the first integer is less than 0 and the second int is greater than 0, then make the product negative
-        if (($firstInt < 0) && ($secondInt > 0)) {
+    // if the firstInt is less than 0 and the secondInt is greater than 0, then make the product negative
+    if (($firstInt < 0) && ($secondInt > 0)) {
             $product = $product * -1;
-        }
+    }
 
-    // otherwise, if the first integer is greater than 0 and the second int is less than 0, then make the product negative
-        ELSEIF (($secondInt < 0) && ($firstInt > 0)) {
+    // otherwise, if firstInt is greater than 0 and secondInt is less than 0, then make the product negative
+    elseif (($secondInt < 0) && ($firstInt > 0)) {
             $product = $product * -1;
-         }
+    }
 
     // redefine calculation statement
     $numbers = $firstInt . "*" . $secondInt . "=" . $product;
 
     // display the product
     echo $numbers;
-?>
+    ?>
     </iframe>
       <!-- MDL Progress Bar with Indeterminate Progress -->
       <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>

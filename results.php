@@ -1,13 +1,13 @@
-<?php 
-  // Created by: Julien Lamoureux
-   // Created on: May 2023
-   // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
+<?php
+    // Created by: Julien Lamoureux
+    // Created on: May 2023
+    // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
 
-   // intialize product to 0
-   $product = 0;
+    // intialize product to 0
+    $product = 0;
 
-   // initialize numbers to an empty string
-   $numbers = "";
+    // initialize numbers to an empty string
+    $numbers = "";
 
     // get first integer
     $firstInt = $_POST["first-int"];
@@ -21,23 +21,23 @@
 
     // if the user enters nothing, tell them to enter two integers
     if (($firstInt == "") || ($secondInt == "")) {
-      echo "Please enter two integers.";
+        echo "Please enter two integers.";
     }
-    
+
     // use a for loop to calculate the product from the two integers
     else {
-      for ($counter = 0; $counter < $absSecondInt; $counter++) {
-        $product += $absFirstInt;
-      }
+    for ($counter = 0; $counter < $absSecondInt; $counter++) {
+            $product += $absFirstInt;
+    }
 
-    // if the first integer is less than 0 and the second int is greater than 0, then make the product negative
+    // if the firstInt is less than 0 and the secondInt is greater than 0, then make the product negative
     if (($firstInt < 0) && ($secondInt > 0)) {
-       $product = $product * -1;
-     }
+            $product = $product * -1;
+    }
 
-    // otherwise, if the first integer is greater than 0 and the second int is less than 0, then make the product negative
-    else if (($secondInt < 0) && ($firstInt > 0)) {
-      $product = $product * -1;
+    // otherwise, if firstInt is greater than 0 and secondInt is less than 0, then make the product negative
+    elseif (($secondInt < 0) && ($firstInt > 0)) {
+            $product = $product * -1;
     }
 
     // redefine calculation statement
@@ -45,5 +45,4 @@
 
     // display the product
     echo $numbers;
-    }
-?>
+    ?>
