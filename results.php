@@ -1,9 +1,10 @@
+
 <?php
     // Created by: Julien Lamoureux
     // Created on: May 2023
     // This file contains the JS functions for index.html, Unit5-02-PHP-ProductOfNumbers
 
-    // intialize product to 0
+    // initialize product to 0
     $product = 0;
 
     // initialize numbers to an empty string

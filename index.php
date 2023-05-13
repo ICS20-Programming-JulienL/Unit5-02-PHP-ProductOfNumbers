@@ -40,7 +40,8 @@
           <input type="number" id="first-int" step="1" placeholder="Eg. 4" name="first-int">
            <br><br>
         <label for="second-int">Enter your second integer</label>
-        <input type="number" id="second-int" placeholder="Eg. 5" name="second-int"><br><br>
+        <input type="number" id="second-int" placeholder="Eg. 5" name="second-int">
+        <br><br>
         <input type="submit" value="Calculate Product"><br><br>	
       </form>
       <!--Display Statement for Museum Admission-->
