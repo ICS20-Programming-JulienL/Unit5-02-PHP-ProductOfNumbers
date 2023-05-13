@@ -27,7 +27,7 @@ if (($firstInt == "") || ($secondInt == "")) {
 // use a for loop to calculate the product from the two integers
     for ($counter = 0; $counter < $absSecondInt; $counter++) {
             $product += $absFirstInt;
-   }
+    }
 
     // if the firstInt is less than 0 and the secondInt is greater than 0, then make the product negative
     if (($firstInt < 0) && ($secondInt > 0)) {
