@@ -69,10 +69,8 @@
     // if the user enters nothing, tell them to enter two integers
     if (($firstInt == "") || ($secondInt == "")) {
         echo "Please enter two integers.";
-    }
-
+    } else {
     // use a for loop to calculate the product from the two integers
-    else {
     for ($counter = 0; $counter < $absSecondInt; $counter++) {
             $product += $absFirstInt;
     }
@@ -80,10 +78,8 @@
     // if the firstInt is less than 0 and the secondInt is greater than 0, then make the product negative
     if (($firstInt < 0) && ($secondInt > 0)) {
             $product = $product * -1;
-    }
-
+    } elseif (($secondInt < 0) && ($firstInt > 0)) {
     // otherwise, if firstInt is greater than 0 and secondInt is less than 0, then make the product negative
-    elseif (($secondInt < 0) && ($firstInt > 0)) {
             $product = $product * -1;
     }
 
