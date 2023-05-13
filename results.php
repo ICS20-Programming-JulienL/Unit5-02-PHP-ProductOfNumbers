@@ -36,9 +36,9 @@ if (($firstInt < 0) && ($secondInt > 0)) {
   // otherwise, if firstInt is greater than 0 and secondInt is less than 0, then make the product negative
             $product = $product * -1;
 }
-
     // redefine calculation statement
     $numbers = $firstInt . "*" . $secondInt . "=" . $product;
+}
 
     // display the product
     echo $numbers;
